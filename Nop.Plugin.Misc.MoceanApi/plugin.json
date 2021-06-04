@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Misc",
+  "FriendlyName": "MoceanApi SMS Broadcast",
+  "SystemName": "Misc.MoceanApi",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.40" ],
+  "Author": "Mocean",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Misc.MoceanApi.dll",
+  "Description": "This plugin allows sending of text messages in bulk to many recipients by using MoceanAPI service."
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Mocean.Csharp.Client</id>
+    <version>2.1.0</version>
+    <title>MoceanAPI</title>
+    <authors>Mocean</authors>
+    <owners>Mocean</owners>
+    <license type="file">LICENSE.md</license>
+    <projectUrl>https://github.com/MoceanAPI/mocean-sdk-dotnet</projectUrl>
+    <iconUrl>https://moceanapi.com/images/favicon.png</iconUrl>
+    <repository type="git" url="https://github.com/MoceanAPI/mocean-sdk-dotnet"></repository>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Official C#/.NET wrapper for the Mocean API</description>
+    <releaseNotes>
+      - Fix dependencies not being downloaded
+    </releaseNotes>
+    <copyright>© Copyright 2018-2019</copyright>
+    <tags>SMS phone moceanapi mocean</tags>
+    <dependencies>
+      <group targetFramework="net452">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="net46">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="net461">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="net462">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="net471">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="netstandard1.6">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+      <group targetFramework="netstandard2.0">
+        <dependency id="Newtonsoft.Json" version="[12.0.0,13.0.0)"></dependency>
+        <dependency id="System.Net.Http" version="[4.0.0,5.0.0)"></dependency>
+        <dependency id="System.Xml.XmlSerializer" version="[4.0.0,5.0.0)"></dependency>
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\LICENSE.md" target="" />
+    <file src="bin\Release\net452\Mocean.dll" target="lib\net452\Mocean.dll" />
+    <file src="bin\Release\net46\Mocean.dll" target="lib\net46\Mocean.dll" />
+    <file src="bin\Release\net461\Mocean.dll" target="lib\net461\Mocean.dll" />
+    <file src="bin\Release\net462\Mocean.dll" target="lib\net462\Mocean.dll" />
+    <file src="bin\Release\net471\Mocean.dll" target="lib\net471\Mocean.dll" />
+    <file src="bin\Release\netstandard1.6\Mocean.dll" target="lib\netstandard1.6\Mocean.dll" />
+    <file src="bin\Release\netstandard2.0\Mocean.dll" target="lib\netstandard2.0\Mocean.dll" />
+  </files>
+</package>

@@ -1,0 +1,91 @@
+﻿@model Nop.Plugin.Misc.MoceanApi.Models.MoceanApiHistoryModel
+@{
+    ViewBag.Title = "Broadcast";
+    Layout = "_AdminLayout";
+    Html.SetActiveMenuItemSystemName("Broadcast");
+}
+
+<div class="content-header">
+    <h1>
+        SMS Broadcast
+    </h1>
+</div>
+
+<div class="content">
+    <form asp-controller="MoceanApi" asp-action="Broadcast" method="post">
+        <div class="cards-group">
+            <div class="card card-default">
+                <div class="card-body">
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="RecipientSelection" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-select asp-for="RecipientSelection" asp-items="Model.RecipientsSelectList" />
+                            <span asp-validation-for="RecipientSelection" asp-required="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row" id="specCust">
+                        <div class="col-md-3">
+                            <nop-label asp-for="SpecificCustomers" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-select asp-for="SpecificCustomers" asp-items="Model.AvailableRecipients"/>
+                            <span asp-validation-for="SpecificCustomers" asp-required="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row" id="specPhone">
+                        <div class="col-md-3">
+                            <nop-label asp-for="SpecificPhone" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-textarea asp-for="SpecificPhone" />
+                            <span asp-validation-for="SpecificPhone" asp-required="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-3">
+                            <nop-label asp-for="Message" />
+                        </div>
+                        <div class="col-md-9">
+                            <nop-textarea asp-for="Message" />
+                            <span asp-validation-for="Message" asp-required="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row float-right">
+                        <div class="col-md-9 col-md-offset-3">
+                            <input type="submit" name="send" class="btn btn-primary" value="Send" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+ </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            hideFields();
+            $("#RecipientSelection").change(toggleRecipient);
+        });
+
+        function toggleRecipient() {
+            var selectedPackingTypeId = $("#RecipientSelection").val();
+            if (selectedPackingTypeId == 'spec_cust') {
+                $('#specCust').showElement();
+                $('#specPhone').hideElement();
+            } else if (selectedPackingTypeId == 'spec_phone') {
+                $('#specPhone').showElement();
+                $('#specCust').hideElement();
+            }
+            else {
+                $('#specPhone').hideElement();
+                $('#specCust').hideElement();
+            }
+        }
+
+        function hideFields() {
+            $('#specPhone').hideElement();
+            $('#specCust').hideElement();
+        }
+    </script>

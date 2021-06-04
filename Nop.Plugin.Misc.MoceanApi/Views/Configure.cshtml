@@ -1,0 +1,58 @@
+﻿@model Nop.Plugin.Misc.MoceanApi.Models.ConfigurationModel
+@{
+    Layout = "_ConfigurePlugin";
+}
+
+<form asp-controller="MoceanApi" asp-action="Configure" method="post">
+    <div class="cards-group">
+        <div class="card card-default">
+            <div class="card-body">
+                <p>
+                    To sign up for a Mocean Account, <a href="https://dashboard.moceanapi.com/register" target="_blank">click here</a>. <br />
+                    Api Key and Api Secret can be found at <a href="https://dashboard.moceanapi.com/" target="_blank">dashboard</a>.<br />
+                </p>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="CreditBalance" />
+                    </div>
+                    <div class="col-md-9">
+                        <label class="col-form-label">@Model.CreditBalance</label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ApiKey" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ApiKey" asp-required="true" asp-value="@Model.ApiKey" />
+                        <span asp-validation-for="ApiKey"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="ApiSecret" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="ApiSecret" asp-required="true" asp-value="@Model.ApiSecret" />
+                        <span asp-validation-for="ApiSecret"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-3">
+                        <nop-label asp-for="MessageFrom" />
+                    </div>
+                    <div class="col-md-9">
+                        <nop-editor asp-for="MessageFrom" asp-required="true" asp-value="@Model.MessageFrom" />
+                        <span asp-validation-for="MessageFrom"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-9 col-md-offset-3">
+                        <input type="submit" name="save" class="btn btn-primary" value="@T("Admin.Common.Save")" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
