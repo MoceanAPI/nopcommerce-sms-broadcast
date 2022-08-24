@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Nop.Plugin.Misc.MoceanApi
+build_property.ProjectDir = C:\Users\kwk98\Desktop\nopCommerce_4.40.4_Source\Plugins\Nop.Plugin.Misc.MoceanApi\

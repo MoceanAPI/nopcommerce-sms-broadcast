@@ -1,7 +1,19 @@
 ﻿@model Nop.Plugin.Misc.MoceanApi.Models.ConfigurationModel
 @{
     Layout = "_ConfigurePlugin";
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/animate.min.css");
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/cookieconsent.min.css");
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/main.css");
+
+    Html.AddScriptParts("~/Plugins/Misc.MoceanApi/Scripts/cookieconsent.min.js");
+    Html.AddScriptParts("~/Plugins/Misc.MoceanApi/Scripts/yandex.js");
 }
+
+<style>
+    .cc-color-override-688238583 .cc-btn:hover, .cc-color-override-688238583 .cc-btn:focus {
+        background-color: rgb(241, 214, 0);
+    }
+</style>
 
 <form asp-controller="MoceanApi" asp-action="Configure" method="post">
     <div class="cards-group">
@@ -10,6 +22,8 @@
                 <p>
                     To sign up for a Mocean Account, <a href="https://dashboard.moceanapi.com/register" target="_blank">click here</a>. <br />
                     Api Key and Api Secret can be found at <a href="https://dashboard.moceanapi.com/" target="_blank">dashboard</a>.<br />
+                    Send us a feedback <a href="https://bit.ly/3Pt5ZKA" target="_blank" rel="noopener noreferrer">here!</a>.<br />
+
                 </p>
                 <div class="form-group row">
                     <div class="col-md-3">

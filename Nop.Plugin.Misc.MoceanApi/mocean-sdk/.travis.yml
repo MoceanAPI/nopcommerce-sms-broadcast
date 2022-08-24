@@ -1,0 +1,12 @@
+language: csharp
+solution: Mocean.sln
+dist: xenial
+mono: latest
+dotnet: 2.1
+ 
+script:
+  - dotnet build
+  - dotnet test --no-build /p:CollectCoverage=true /p:CoverLetOutputFormat=opencover
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -10,7 +10,19 @@
     ViewBag.Title = "History";
     Layout = "_AdminLayout";
     Html.SetActiveMenuItemSystemName("History");
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/animate.min.css");
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/cookieconsent.min.css");
+    Html.AddCssFileParts("~/Plugins/Misc.MoceanApi/Content/main.css");
+
+    Html.AddScriptParts("~/Plugins/Misc.MoceanApi/Scripts/cookieconsent.min.js");
+    Html.AddScriptParts("~/Plugins/Misc.MoceanApi/Scripts/yandex.js");
 }
+
+<style>
+    .cc-color-override-688238583 .cc-btn:hover, .cc-color-override-688238583 .cc-btn:focus {
+        background-color: rgb(241, 214, 0);
+    }
+</style>
 
 <div class="content-header">
     <h1>
